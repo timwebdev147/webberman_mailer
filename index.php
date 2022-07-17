@@ -33,7 +33,7 @@ if(isset($_REQUEST['submit']))
         //mysqli_query($insertTB);
         mysqli_query($conn,$insertTB) or die(mysqli_error($conn));
     }
-    header("Location: http://localhost:8080/", true, 301);
+    header("Location: https://webberman.vercel.app/", true, 301);
 exit();
 }
 ?>
