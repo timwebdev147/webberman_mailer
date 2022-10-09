@@ -5,6 +5,7 @@
       }
     },
     "routes": [
+        { "src": "/autoload", "dest": "/vendor/autoload.php" },
         { "src": "/(.*)",  "dest": "/api/index.php" }
     ],
     "build": {
