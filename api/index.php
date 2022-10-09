@@ -8,7 +8,7 @@
    
    <body>
     <?php
-    // phpinfo();
+    phpinfo();
 
     if(isset($_REQUEST['submit']))
     {
