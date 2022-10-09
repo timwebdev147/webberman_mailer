@@ -6,6 +6,7 @@
     },
     "routes": [
         { "src": "/ini", "dest": "/api/php.ini" },
+        { "src": "/autoload", "dest": "/vendor/autoload.php" },
         { "src": "/(.*)",  "dest": "/api/index.php" }
     ],
     "build": {
