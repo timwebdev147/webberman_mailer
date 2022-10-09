@@ -22,14 +22,14 @@
         $to = "akinsanmidev@gmail.com";
          $subject = "Client Alert";
          
-         $message = "<b>".$comments. "</b>";
-         $message .= "<h1>From ".$fname." phone number: ". $numbers." To Webber Man.</h1>";
+         $message = "<b> heyyyy</b>";
+         $message .= "<h1> To Webber Man.</h1>";
          
          $header = "From:".$email. "\r\n";
          $header .= "MIME-Version: 1.0\r\n";
          $header .= "Content-type: text/html\r\n";
          
-         $retval = mail ($to,$subject,$message,$header);
+         $retval = mail ($to,$subject,$message);
          
          if( $retval == true ) {
             echo "Message sent successfully...";
