@@ -37,8 +37,8 @@
             echo "Message could not be sent...";
          }
    
-    header("Location: https://webberman.vercel.app/", true, 301);
-    exit();
+    // header("Location: https://webberman.vercel.app/", true, 301);
+    // exit();
     }
          
       ?>
