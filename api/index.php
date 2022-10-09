@@ -1,6 +1,5 @@
 <?php
-// phpinfo();
-echo "hello world";
+phpinfo();
 
 // if(isset($_REQUEST['submit']))
 // {
