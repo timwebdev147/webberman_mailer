@@ -48,7 +48,7 @@ $subject = "Hey Webber Man there's a Client's message from ".$fullname;
 $bodyText =  "Hey Webber Man\r\n".$message;
 
 // The HTML-formatted body of the email
-$bodyHtml = '<h1>Hey Webber Man message from '.$fullname.' '.$number. '</h1>
+$bodyHtml = '<h1>Hey Webber Man message from '.$fullname.' '.$phone. '</h1>
     <p>'.$message.'</p>';
 
 $mail = new PHPMailer(true);
