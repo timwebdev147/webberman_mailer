@@ -42,7 +42,7 @@ if(isset($_POST['submit']))  {
    $message = $_POST['comment'];
    
    // The subject line of the email
-$subject = "Hey Webber Man there's a Client's message from ".$fullname;
+$subject = "Hey Webber Man you have a Client's message from ".$fullname;
 
 // The plain-text body of the email
 $bodyText =  "Hey Webber Man\r\n".$message;
