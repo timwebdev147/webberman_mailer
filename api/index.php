@@ -40,9 +40,8 @@ if(isset($_POST['submit']))  {
    $email = $_POST['email'];
    $phone = $_POST['number'];
    $message = $_POST['comment'];
-}
-
-// The subject line of the email
+   
+   // The subject line of the email
 $subject = "Hey Webber Man there's a Client's message from ".$fullname;
 
 // The plain-text body of the email
@@ -65,7 +64,7 @@ try {
     $mail->SMTPAuth   = true;
     $mail->SMTPSecure = 'tls';
     $mail->addCustomHeader('X-SES-CONFIGURATION-SET');
-
+    
     // Specify the message recipients.
     $mail->addAddress($recipient);
     // You can also add CC, BCC, and additional To recipients here.
@@ -81,6 +80,7 @@ try {
     echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
+}
 }
 
 ?>
