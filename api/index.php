@@ -1,8 +1,7 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
