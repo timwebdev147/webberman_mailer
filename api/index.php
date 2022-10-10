@@ -34,19 +34,23 @@ $passwordSmtp = 'BB+IEJEKCqzgSTEJ0w6qtOsA+mCWCxBmwTaJtH9ZnyBM';
 $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
+if(isset($_POST['submit']))  {
+   # code...
+   $fullname = $_POST['fullname'];
+   $email = $_POST['email'];
+   $phone = $_POST['number'];
+   $message = $_POST['comment'];
+}
+
 // The subject line of the email
-$subject = 'Amazon SES test (SMTP interface accessed using PHP)';
+$subject = "Hey Webber Man there's a Client's message from ".$fullname;
 
 // The plain-text body of the email
-$bodyText =  "Email Test\r\nThis email was sent through the
-    Amazon SES SMTP interface using the PHPMailer class.";
+$bodyText =  "Hey Webber Man\r\n".$message;
 
 // The HTML-formatted body of the email
-$bodyHtml = '<h1>Email Test</h1>
-    <p>This email was sent through the
-    <a href="https://aws.amazon.com/ses">Amazon SES</a> SMTP
-    interface using the <a href="https://github.com/PHPMailer/PHPMailer">
-    PHPMailer</a> class.</p>';
+$bodyHtml = '<h1>Hey Webber Man message from '.$fullname.' '.$number. '</h1>
+    <p>'.$message.'</p>';
 
 $mail = new PHPMailer(true);
 
