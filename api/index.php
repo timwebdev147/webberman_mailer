@@ -39,13 +39,17 @@ $port = 587;
 
 // if(isset($_POST['submit']))  {
     $fullname = $email = $phone = $message = '';
-    
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    # code...
    $fullname = $_POST['fullname'];
    $email = $_POST['email'];
    $phone = $_POST['number'];
    $message = $_POST['comment'];
+
+}
+   if(isset($fullname) && isset($email) && isset($phone) && isset($message)){
+    
    
    // The subject line of the email
 $subject = "Hey Webber Man you have a Client's message from ".$fullname;
