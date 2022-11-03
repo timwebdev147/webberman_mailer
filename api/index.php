@@ -48,7 +48,7 @@ $port = 587;
    $message = $_POST['comment'];
 
 }
-   if(isset($fullname) && isset($email) && isset($phone) && isset($message)){
+   if($fullname != '' && $email != '' && $phone != '' && $message != ''){
     
    
    // The subject line of the email
