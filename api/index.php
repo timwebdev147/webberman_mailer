@@ -38,6 +38,9 @@ $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
 // if(isset($_POST['submit']))  {
+    $fullname = $email = $phone = $message = '';
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    # code...
    $fullname = $_POST['fullname'];
    $email = $_POST['email'];
@@ -84,6 +87,6 @@ try {
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
-// }
+}
 
 ?>
