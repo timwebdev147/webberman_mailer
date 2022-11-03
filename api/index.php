@@ -40,7 +40,8 @@ $port = 587;
 // if(isset($_POST['submit']))  {
     $fullname = $email = $phone = $message = '';
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fullname']) 
+    && isset($_POST['email']) && isset($_POST['number']) && isset($_POST['comment'])) {
    # code...
    $fullname = $_POST['fullname'];
    $email = $_POST['email'];
