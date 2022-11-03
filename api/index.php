@@ -37,7 +37,7 @@ $passwordSmtp = 'BB+IEJEKCqzgSTEJ0w6qtOsA+mCWCxBmwTaJtH9ZnyBM';
 $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
-if(isset($_POST['submit']))  {
+// if(isset($_POST['submit']))  {
    # code...
    $fullname = $_POST['fullname'];
    $email = $_POST['email'];
@@ -84,6 +84,6 @@ try {
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
-}
+// }
 
 ?>
