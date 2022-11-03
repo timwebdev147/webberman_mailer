@@ -38,15 +38,23 @@ $host = 'email-smtp.us-east-1.amazonaws.com';
 $port = 587;
 
 // if(isset($_POST['submit']))  {
+    function test_input($data)
+{
+    # code...
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+};
     $fullname = $email = $phone = $message = '';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['fullname']) 
     && isset($_POST['email']) && isset($_POST['number']) && isset($_POST['comment'])) {
    # code...
-   $fullname = $_POST['fullname'];
-   $email = $_POST['email'];
-   $phone = $_POST['number'];
-   $message = $_POST['comment'];
+   $fullname = Test_input($_POST['fullname']);
+   $email = Test_input($_POST['email']);
+   $phone = Test_input($_POST['number']);
+   $message = Test_input($_POST['comment']);
 
 }
    if($fullname != '' && $email != '' && $phone != '' && $message != ''){
